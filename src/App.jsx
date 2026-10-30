@@ -1,29 +1,8 @@
 import { useState } from 'react'
 import Afficher from './modifier'
+import { etudiantsInitial } from './data'
 function App() {
-  const etudiantsInitial = [
-  {
-    id: 1,
-    nom: "Anouar",
-    age: 20,
-    filiere: "DEVOWFS",
-    note: 15
-  },
-  {
-    id: 2,
-    nom: "Yassine",
-    age: 21,
-    filiere: "DEVOWFS",
-    note: 12
-  },
-  {
-    id: 3,
-    nom: "Sara",
-    age: 19,
-    filiere: "Gestion",
-    note: 17
-  }
-];
+  
   const [Liste,setListe]=useState(etudiantsInitial)
   const [id,setId]=useState(Liste.reduce((max,p)=>max.id>p.id ? max.id :p.id)+1)
   const [nom,setNom]=useState("")
